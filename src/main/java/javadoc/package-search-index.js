@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ru.marker"},{"l":"ru.marker.Animals"},{"l":"ru.marker.Events"},{"l":"ru.marker.ObserverPattern"},{"l":"ru.marker.Zoo"}]

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Класс предназначен для корректной десериализации JSON объектов, содержащих информацию об животных из зоопарка
+ * Class to Parse JSON file
  */
-public class AnimalDeserialize {
+public class AnimalParseJson {
 
 
     @SerializedName("Carnivore")
@@ -17,8 +17,12 @@ public class AnimalDeserialize {
     @SerializedName("Herbivore")
     private List<Herbivore> herbivores;
 
-
+    /**
+     * get all animals
+     * @return list of animals
+     */
     public List<Animal> getAnimals() {
+        //System.out.println(carnivores);
         List<Animal> animals = new ArrayList<>();
         animals.addAll(carnivores);
         animals.addAll(herbivores);

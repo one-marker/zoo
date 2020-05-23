@@ -1,0 +1,26 @@
+{
+  "Carnivore":[
+    {
+      "type":"bear",
+      "state":"calm"
+    },
+    {
+      "type":"bear",
+      "state":"calm"
+    },
+    {
+      "type":"lion",
+      "state":"calm"
+    }
+  ],
+  "Herbivore":[
+    {
+      "type":"horse",
+      "state":"calm"
+    },
+    {
+      "type":"rabbit",
+      "state":"calm"
+    }
+  ]
+}
