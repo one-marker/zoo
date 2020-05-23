@@ -1,6 +1,8 @@
-package com.sberbank.zoo;
+package ru.marker.Animals;
 
 import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,15 +10,20 @@ import java.util.List;
  */
 public class AnimalDeserialize {
 
-    @SerializedName("Herbivore")
-    private List<Herbivore> herbivores;
+
     @SerializedName("Carnivore")
     private List<Carnivore> carnivores;
 
-    public List<Herbivore> getHerbivores() {
-        return this.herbivores;
+    @SerializedName("Herbivore")
+    private List<Herbivore> herbivores;
+
+
+    public List<Animal> getAnimals() {
+        List<Animal> animals = new ArrayList<>();
+        animals.addAll(carnivores);
+        animals.addAll(herbivores);
+        return animals;
     }
-    public List<Carnivore> getCarnivores() {
-        return this.carnivores;
-    }
+
+
 }
