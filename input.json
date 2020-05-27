@@ -2,25 +2,30 @@
   "Carnivore":[
     {
       "type":"bear",
-      "state":"calm"
+      "state":"calm",
+      "count": 2
     },
     {
       "type":"bear",
-      "state":"calm"
+      "state":"calm",
+      "count": 24
     },
     {
       "type":"lion",
-      "state":"calm"
+      "state":"calm",
+      "count": 2
     }
   ],
   "Herbivore":[
     {
       "type":"horse",
-      "state":"calm"
+      "state":"calm",
+      "count": 2
     },
     {
       "type":"rabbit",
-      "state":"calm"
+      "state":"calm",
+      "count": 21
     }
   ]
 }

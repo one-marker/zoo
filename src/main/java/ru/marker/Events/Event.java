@@ -1,5 +1,7 @@
 package ru.marker.Events;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.marker.Animals.Animal;
 import ru.marker.Zoo.Zoo;
 
@@ -14,6 +16,9 @@ public enum Event {
     MORNING,
     NIGHT,
     THUNDER;
+
+
+    private static final Logger logger = LoggerFactory.getLogger(Event.class);
 
     /**
      * This method convert animal type to event
@@ -34,13 +39,17 @@ public enum Event {
     public static void setAtmos(Zoo zoo, Event atmos) {
         switch (atmos) {
             case MORNING:
+                logger.info("event MORNING");
                 break;
             case NIGHT:
+                logger.info("event NIGHT");
                 break;
             case THUNDER:
+                logger.info("event THUNDER");
                 break;
             default:
-                throw new NullPointerException();
+                logger.error("event not available");
+                return;
         }
 
         zoo.setZooAtmos(atmos);
@@ -54,7 +63,8 @@ public enum Event {
      */
     public static void feedAnimal(Zoo zoo, Animal.Types type) {
         if (type == null) {
-            throw new NullPointerException();
+            logger.error("event not available");
+            return;
         }
 
         zoo.notifyAllObservers(Event.feedEvent(type));

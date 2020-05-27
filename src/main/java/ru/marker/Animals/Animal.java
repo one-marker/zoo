@@ -18,6 +18,13 @@ public abstract class Animal implements Observer {
      */
     private States state;
 
+
+    /**
+     * Animal count
+     */
+    private int count;
+
+
     public Animal (String type) {
         this.type = type;
     }
@@ -39,6 +46,14 @@ public abstract class Animal implements Observer {
         return this.state;
     }
 
+
+    /**
+     *
+     * @return Animal count
+     */
+    public int getCount() {
+        return count;
+    }
 
 
     /**
@@ -72,7 +87,8 @@ public abstract class Animal implements Observer {
     public String toString()
     {
         return "\n\nAnimal type: " + this.type +
-                "\nAnimal state: " + this.state;
+                "\nAnimal state: " + this.state+
+                "\nAnimal count: " + this.count;
     }
 
     @Override
